@@ -31,7 +31,7 @@
         }
 
         function setup() {
-            createCanvas(1920, 1080);
+            createCanvas(innerWidth, innerHeight);
             mic = new p5.AudioIn();
             mic.start();
             frameRate(60);
@@ -46,8 +46,8 @@
 
         function draw() {
             let vol = mic.getLevel();
-            let X = 670;
-            let Y = 1080 / 2 - 582 / 2;
+            let X = width / 2 - 150;
+            let Y = height / 2 - 75;
 
             let hueValue = map(vol, 0, 0.2, 0, 360);
 
